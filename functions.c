@@ -192,10 +192,10 @@ void adminMenu() {
     getchar();
     printf("              LOGIN            \n");
     printf("   ===============================\n");
-    printf("   Please enter your account: ");
+    printf("   Please enter your account ( Acc: Dereekdz123): ");
     fgets(input.email, sizeof(input.email), stdin); 
     input.email[strcspn(input.email, "\n")] = '\0';
-    printf("   Please enter your Password: "); 
+    printf("   Please enter your Password (110106 - 270406): "); 
     fgets(input.password, sizeof(input.password), stdin);
     input.password[strcspn(input.password, "\n")] = '\0';
     printf("   ===============================\n");
@@ -379,7 +379,7 @@ void sortUsersByName() {
     }
     fclose(file);
     for (int i = 0; i < userCount - 1; i++) {
-        for (int j = 0; j < userCount - i - 1; j++) {
+        for (int j = 1; j < userCount - i - 1; j++) {
             if (strcmp(users[j].name, users[j + 1].name) > 0) {
                 temp = users[j];
                 users[j] = users[j + 1];
